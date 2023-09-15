@@ -29,13 +29,6 @@ class ShoppingCart
     end
   end
 
-  def calculate_discount(discount_percentage)
-    total = @items.sum(&:subtotal)
-    discount = total * (discount_percentage / 100.0)
-    total -= discount
-    total
-  end
-
   def print_invoice
     puts "Items in Cart:"
     @items.each do |item|
@@ -48,9 +41,9 @@ end
 
 # Example usage:
 
-cart = ShoppingCart.new
-cart.add_item("Widget", 2, 10)
-cart.add_item("Gadget", 1, 20)
-cart.calculate_discount(10)
-cart.remove_item("Widget")
-cart.print_invoice
+# cart = ShoppingCart.new
+# cart.add_item("Widget", 2, 10)
+# cart.add_item("Gadget", 1, 20)
+# cart.calculate_discount(10)
+# cart.remove_item("Widget")
+# cart.print_invoice
